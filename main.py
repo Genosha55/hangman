@@ -23,6 +23,7 @@ for i in range(26):
 # fonts
 LETTER_FONT = pygame.font.SysFont('comicsans', 40)
 WORD_FONT = pygame.font.SysFont('comicsans', 60)
+TITLE_FONT = pygame.font.SysFont('comicsans', 70)
 
 # load images
 images = []
@@ -48,6 +49,9 @@ run = True
 
 def draw():
     win.fill(WHITE)
+    #draw title
+    text = TITLE_FONT.render("DEVELOPER HANGMAN", 1, BLACK)
+    win.blit(text, (WIDTH/2 - text.get_width()/2, 20))
 
     # draw word
     display_word = ""
